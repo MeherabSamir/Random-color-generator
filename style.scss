@@ -1,0 +1,78 @@
+:root{
+    --clr-bg:#FFC600;
+    --clr-text:#1c1c1c;
+}
+
+::selection{
+    background: var(--clr-text);
+    color: var(--clr-bg);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 1px var(--clr-text), 
+    3px 3px 5px var(--clr-bg); 
+}
+h1::selection,
+h1>*::selection{
+    text-shadow: none;
+}
+
+p{
+    font-size: .9rem;
+    min-width: 90%;
+}
+
+.btn{
+    display: inline-block;
+    background-color: var(--clr-text);
+    color: var(--clr-bg);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 100vh;
+    box-shadow: 2px 2px 2px var(--clr-text), 
+    6px 6px 10px var(--clr-bg); 
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+footer{
+    position: relative;
+    top: 35%;
+    p{
+        a{
+            color: var(--clr-text);
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+    h1{
+        font-size: 1.45rem;
+    }
+}
